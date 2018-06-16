@@ -155,24 +155,8 @@
                         <password>sa</password>
                     </security>
                 </datasource>
-                <datasource jndi-name="java:jboss/hubDS" pool-name="hubDS" enabled="true" use-java-context="true">
-                    <connection-url>jdbc:postgresql://localhost:5555/hubdb</connection-url>
-                    <driver>postgres</driver>
-                    <security>
-                        <user-name>hub</user-name>
-                        <password>hub</password>
-                    </security>
-                </datasource>
                 <datasource jndi-name="java:jboss/skyDS" pool-name="skyDS" enabled="true" use-java-context="true">
-                    <connection-url>jdbc:postgresql://localhost:5432/skyone</connection-url>
-                    <driver>postgres</driver>
-                    <security>
-                        <user-name>sky</user-name>
-                        <password>sky</password>
-                    </security>
-                </datasource>
-                <datasource jndi-name="java:jboss/skynodeDS" pool-name="skynodeDS" enabled="true" use-java-context="true">
-                    <connection-url>jdbc:postgresql://localhost:5432/skynode</connection-url>
+                    <connection-url>jdbc:postgresql://172.30.230.65:5432/skyone</connection-url>
                     <driver>postgres</driver>
                     <security>
                         <user-name>sky</user-name>
