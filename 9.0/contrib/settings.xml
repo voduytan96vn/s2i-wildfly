@@ -185,10 +185,10 @@
           </releases>
         </pluginRepository>
       </pluginRepositories>
-    </profile>
+    </profile>-->
 
   </profiles>
-  <activeProfiles>
+  <!--<activeProfiles>
     <activeProfile>securecentral</activeProfile>
   </activeProfiles>-->
 </settings>
