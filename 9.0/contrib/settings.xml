@@ -14,7 +14,7 @@
   <profiles>
 
     <!-- JBoss EAP Maven repository -->
-    <profile>
+    <!--<profile>
       <id>jboss-eap-repository</id>
       <activation>
         <property>
@@ -46,10 +46,10 @@
           </snapshots>
         </pluginRepository>
       </pluginRepositories>
-    </profile>
+    </profile>-->
 
     <!-- JBoss EAP Maven repository (HTTP version, disabled by default) -->
-    <profile>
+    <!--<profile>
       <id>jboss-eap-repository-insecure</id>
       <repositories>
         <repository>
@@ -75,10 +75,10 @@
           </snapshots>
         </pluginRepository>
       </pluginRepositories>
-    </profile>
+    </profile>-->
 
     <!-- JBoss Community Maven repository -->
-    <profile>
+    <!--<profile>
       <id>jboss-community-repository</id>
       <activation>
         <property>
@@ -110,10 +110,10 @@
           </snapshots>
         </pluginRepository>
       </pluginRepositories>
-    </profile>
+    </profile>-->
 
     <!-- JBoss Community Maven repository (HTTP version, disabled by default) -->
-    <profile>
+    <!--<profile>
       <id>jboss-community-repository-insecure</id>
       <repositories>
         <repository>
@@ -139,10 +139,10 @@
           </snapshots>
         </pluginRepository>
       </pluginRepositories>
-    </profile>
+    </profile>-->
 
     <!-- Override the repository "central" from the Maven Super POM, to set HTTPS by default -->
-    <profile>
+    <!--<profile>
       <id>securecentral</id>
       <repositories>
         <repository>
@@ -162,10 +162,10 @@
           </releases>
         </pluginRepository>
       </pluginRepositories>
-    </profile>
+    </profile>-->
 
     <!-- central repositories via HTTP. Disabled by default. -->
-    <profile>
+    <!--<profile>
       <id>insecurecentral</id>
       <repositories>
         <repository>
@@ -190,5 +190,5 @@
   </profiles>
   <activeProfiles>
     <activeProfile>securecentral</activeProfile>
-  </activeProfiles>
+  </activeProfiles>-->
 </settings>
