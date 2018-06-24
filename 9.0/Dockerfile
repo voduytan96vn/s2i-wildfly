@@ -43,6 +43,8 @@ ADD ./contrib/wfbin/standalone.conf /wildfly/bin/standalone.conf
 ADD ./contrib/wfcfg/standalone.xml /wildfly/standalone/configuration/standalone.xml
 ADD ./contrib/settings.xml $HOME/.m2/
 
+RUN mvn install:install-file -Dfile=/opt/pdf-fonts/pdf-fonts.jar -DgroupId=vn.com.aisoft -DartifactId=pdf-fonts -Dpackaging=jar -Dversion=1.0
+
 # Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
 COPY ./s2i/bin/ $STI_SCRIPTS_PATH
 

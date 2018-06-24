@@ -279,10 +279,6 @@ if [ -f "$LOCAL_SOURCE_DIR/pom.xml" ]; then
 
   mvn --version
   mvn $MAVEN_ARGS
-
-  if [ -d /opt/pdf-fonts ]; then
-    mvn install:install-file -Dfile=/opt/pdf-fonts/pdf-fonts.jar -DgroupId=vn.com.aisoft -DartifactId=pdf-fonts -Dpackaging=jar -Dversion=1.0
-  fi
   
   ERR=$?
   if [ $ERR -ne 0 ]; then
