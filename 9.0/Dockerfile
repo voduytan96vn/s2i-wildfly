@@ -32,11 +32,13 @@ RUN INSTALL_PKGS="tar unzip bc which lsof java-1.8.0-openjdk java-1.8.0-openjdk-
     mkdir -p /wildfly && \
     (curl -v https://download.jboss.org/wildfly/$WILDFLY_VERSION_BIN/wildfly-$WILDFLY_VERSION_BIN.tar.gz | tar -zx --strip-components=1 -C /wildfly) && \
     mkdir -p /opt/s2i/destination && \
-	rm /wildfly/modules/system/layers/base/org/eclipse/persistence/main/module.xml
+	rm /wildfly/modules/system/layers/base/org/eclipse/persistence/main/module.xml && \
+	mkdir -p /opt/pdf-fonts
 
 # Add s2i wildfly customizations
 ADD ./contrib/wfmodules/eclipse/ /wildfly/modules/system/layers/base/org/eclipse/persistence/main/
 ADD ./contrib/wfmodules/postgresql/ /wildfly/modules/system/layers/base/org/
+ADD ./contrib/wfmodules/pdf-fonts/ /opt/pdf-fonts/
 ADD ./contrib/wfbin/standalone.conf /wildfly/bin/standalone.conf
 ADD ./contrib/wfcfg/standalone.xml /wildfly/standalone/configuration/standalone.xml
 ADD ./contrib/settings.xml $HOME/.m2/
